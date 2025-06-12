@@ -8,46 +8,88 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-      background-color: #000;       /* 背景黒 */
-      color: #fff;                  /* 文字白 */
+      background-color: #000;
+      color: #fff;
     }
+
     header {
-      background-color: #111;       /* 少し明るい黒 */
+      background-color: #111;
       padding: 10px 20px;
-      box-shadow: 0 1px 3px rgba(255,255,255,0.1);
+      box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     header h1 {
       font-size: 20px;
       font-weight: 600;
       margin: 0;
+      color: #FFD700;
+    }
+
+    nav a {
+      color: #FFD700;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      background-color: #000;
+      color: #FFD700;
+      text-align: center;
+    }
+
+    section p {
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: auto;
       color: #fff;
     }
-    main {
-      text-align: center;
-      padding: 40px 20px;
+
+    .report-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
+
+    .report-gallery img {
+      width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+    }
+
     .insta-preview {
       max-width: 500px;
       margin: auto;
-      background: #111;           /* 背景は暗めの黒 */
+      background: #111;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 2px 6px rgba(255,255,255,0.1);
+      box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
     }
+
     .insta-preview img {
       width: 100%;
       display: block;
-      filter: none;               /* 画像はカラーのまま */
+      filter: none;
     }
+
     .insta-preview .caption {
       padding: 20px;
       font-size: 16px;
       line-height: 1.5;
       color: #ddd;
     }
+
     footer {
       text-align: center;
       padding: 30px 10px;
@@ -55,38 +97,144 @@
       color: #666;
       background-color: #111;
     }
+
     a.button {
       display: inline-block;
       margin-top: 20px;
       padding: 12px 24px;
-      background-color: #0a84ff;  /* 青系ボタン */
-      color: #fff;
+      background-color: #000;
+      color: #FFD700;
       text-decoration: none;
+      border: 2px solid #FFD700;
       border-radius: 24px;
       font-weight: 500;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
     }
+
     a.button:hover {
-      background-color: #0066cc;
+      background-color: #FFD700;
+      color: #000;
     }
+
+    .players-section {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #000;
+    }
+
+    .players-section h2 {
+      color: #FFD700;
+    }
+
+    .players {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .player-card {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 16px;
+      width: 180px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    }
+
+    .player-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .player-card h3 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+    }
+
+    .player-card small {
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .section-title {
+      color: #FFD700;
+      text-align: center;
+    }
+
   </style>
 </head>
+
 <body>
   <header>
     <h1>FC CATARIA</h1>
+    <nav>
+      <a href="#about">チーム紹介</a>
+      <a href="#reports">活動報告</a>
+      <a href="index.html">Member</a>
+    </nav>
   </header>
 
   <main>
-    <h2> est. 2025.04.17</h2>
-    <div class="insta-preview">
-      <img src="https://i.imgur.com/jfThSc9.jpeg" alt="FC CATARIAの投稿画像" />
-      <div class="caption">
-        北里大学のサッカーサークル「FC CATARIA」です。<br />
-        詳しくはInstagramをチェック！
-        <br />
-        <a class="button" href="https://www.instagram.com/fc.cataria_kitasato/p/DJ1yjf_PtWU/" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
+    <section id="about">
+      <h2 class="section-title">チーム紹介</h2>
+      <p>
+        FC CATARIA（カタリア）は北里大学のフットサルチームです。<br />
+        「共に成長し、語り合える仲間へ」をモットーに、<br />
+        初心者から経験者まで幅広いメンバーが活動中！<br />
+        練習や大会を通じて、仲間と切磋琢磨しながら楽しくフットサルをしています。
+      </p>
+    </section>
+
+    <section id="reports">
+      <h2 class="section-title">活動報告</h2>
+      <p>大会やイベントの様子を写真で紹介しています！</p>
+      <div class="report-gallery">
+        <img src="https://i.imgur.com/jfThSc9.jpeg" alt="大会写真1">
+        <img src="https://i.imgur.com/jfThSc9.jpeg" alt="大会写真2">
+        <img src="https://i.imgur.com/jfThSc9.jpeg" alt="大会写真3">
       </div>
-    </div>
+    </section>
+
+    <section class="players-section">
+      <h2 class="section-title">選手紹介</h2>
+      <div class="players">
+        <div class="player-card">
+          <img src="https://i.imgur.com/jfThSc9.jpeg" alt="伊野 翼" />
+          <h3>伊野 翼<br /><small>INO TSUBASA</small></h3>
+          <p>背番号: 10<br />ポジション: FIXO</p>
+        </div>
+        <div class="player-card">
+          <img src="https://i.imgur.com/jfThSc9.jpeg" alt="座間 慶人" />
+          <h3>座間 慶人<br /><small>ZAMA KITO</small></h3>
+          <p>背番号: 11<br />ポジション: PIVO</p>
+        </div>
+        <div class="player-card">
+          <img src="https://i.imgur.com/jfThSc9.jpeg" alt="寺島 旺甫" />
+          <h3>寺島 旺甫<br /><small>TERASHIMA OSUKE</small></h3>
+          <p>背番号: 6<br />ポジション: ALA</p>
+        </div>
+        
+      </div>
+      <div style="margin-top: 30px;">
+        <a class="button" href="index.html">MORE</a>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Instagram投稿紹介</h2>
+      <div class="insta-preview">
+        <img src="https://i.imgur.com/jfThSc9.jpeg" alt="FC CATARIAの投稿画像" />
+        <div class="caption">
+          北里大学のサッカーサークル「FC CATARIA」の活動の様子を紹介しています。詳しくはInstagramでチェック！
+          <br />
+          <a class="button" href="https://www.instagram.com/fc.cataria_kitasato/p/DJ1yjf_PtWU/" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
